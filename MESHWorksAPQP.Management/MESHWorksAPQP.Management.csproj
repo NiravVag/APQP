@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="SimpleInjector" Version="5.3.2" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EmailProvider\EmailProvider.csproj" />
+    <ProjectReference Include="..\MESHWorksAPQP.Model\MESHWorksAPQP.Model.csproj" />
+    <ProjectReference Include="..\MESHWorksAPQP.Repository\MESHWorksAPQP.Repository.csproj" />
+    <ProjectReference Include="..\MESHWorksAPQP.Shared\MESHWorksAPQP.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Command\Setup\DocumentType\" />
+    <Folder Include="Handlers\Setup\DocumentType\" />
+    <Folder Include="Interface\Managers\Setup\DocumentType\" />
+    <Folder Include="Managers\Setup\DocumentType\" />
+    <Folder Include="ViewModel\Abstract\" />
+    <Folder Include="ViewModel\Setup\DocumentType\" />
+  </ItemGroup>
+
+</Project>
